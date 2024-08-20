@@ -2,6 +2,11 @@ body {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .container {
@@ -9,8 +14,10 @@ body {
   flex: 1;
   flex-wrap: wrap;
   border: 10px solid;
-  width: 1000px;
-  height: 1000px;
+  min-width: 720px;
+  min-height: 720px;
+  max-width: 720px;
+  max-height: 720px;
   /* margin: 10%; */
 }
 
@@ -22,10 +29,18 @@ body {
 }
 
 .box {
-  border: 1px solid blue;
+  border: 1px solid black;
   flex: 1;
 }
 
-.box:hover {
-  background-color: yellow;
+.canvas {
+  border-radius: 5px;
+  padding: 10px 50px;
+  font-size: 16px;
+  background-color: rgb(210, 180, 202);
+}
+
+h1 {
+  margin-bottom: 0px;
+  font-size: 42px;
 }
