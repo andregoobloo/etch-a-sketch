@@ -1,9 +1,11 @@
 "use strict";
 
+const body = document.querySelector("body");
 const container = document.querySelector(".container");
 const canvasSize = document.querySelector(".canvas");
 
 const createCanvas = function (size) {
+  if (size > 100 || size < 1) return;
   for (let i = 0; i < size; i++) {
     const column = document.createElement("div");
     column.classList.add("column");
@@ -29,5 +31,9 @@ container.addEventListener("mouseover", function (e) {
 
 canvasSize.addEventListener("click", function (e) {
   e.preventDefault();
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
   const gridSize = Number(prompt("Enter number of squares per side"));
+  createCanvas(gridSize);
 });
