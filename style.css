@@ -18,13 +18,11 @@ body {
   min-height: 720px;
   max-width: 720px;
   max-height: 720px;
-  /* margin: 10%; */
 }
 
 .column {
   display: flex;
   flex: 1;
-  /* border: 2px solid red; */
   flex-direction: column;
 }
 
@@ -36,11 +34,16 @@ body {
 .canvas {
   border-radius: 5px;
   padding: 10px 50px;
-  font-size: 16px;
-  background-color: rgb(210, 180, 202);
+  font-size: 24px;
+  background-color: black;
+  color: rgb(131, 232, 131);
+}
+
+.canvas:hover {
+  background-color: grey;
 }
 
 h1 {
   margin-bottom: 0px;
-  font-size: 42px;
+  font-size: 48px;
 }

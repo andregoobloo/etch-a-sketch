@@ -1,6 +1,5 @@
 "use strict";
 
-const body = document.querySelector("body");
 const container = document.querySelector(".container");
 const canvasSize = document.querySelector(".canvas");
 
@@ -18,17 +17,26 @@ const createCanvas = function (size) {
   }
 };
 
+// Random color generator
+const randomColor = function () {
+  return `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(
+    Math.random() * 255
+  )}, ${Math.floor(Math.random() * 255)})`;
+};
+
+// Default starting size
 createCanvas(16);
 
+// Drawing in canvas
 const box = document.querySelectorAll(".box");
-
 container.addEventListener("mouseover", function (e) {
   e.preventDefault();
   if (e.target.className === "box") {
-    e.target.style.backgroundColor = "pink";
+    e.target.style.backgroundColor = randomColor();
   }
 });
 
+// Set new canvas size
 canvasSize.addEventListener("click", function (e) {
   e.preventDefault();
   while (container.firstChild) {
